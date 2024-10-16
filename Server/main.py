@@ -80,4 +80,5 @@ def generate_license_key(length=26):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Создаем таблицы в базе данных, если они не существуют
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)  # Запускаем Flask на всех интерфейсах
+
